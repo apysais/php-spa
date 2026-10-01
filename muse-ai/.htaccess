@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /php-spa/muse-ai/
+
+# Let real files (build assets, api/*.php) pass through
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else -> index.php (PHP bootstrap + React Router will parse URL)
+RewriteRule ^(.*)$ index.php [QSA,L]
