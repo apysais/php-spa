@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard({ appData }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // ← returns the navigation function
   return (
     <div>
       <h1>Dashboard</h1>
