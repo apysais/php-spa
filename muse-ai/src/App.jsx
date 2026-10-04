@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard.jsx';
 import User from './pages/User.jsx';
 import Logout from './pages/Logout.jsx';
 import Users from './pages/Users.jsx';
+import CreateUser from './pages/CreateUser.jsx';
+
 /**
  * The main application component that sets up routing for the SPA.
  * @param {{ appData: Object }} param0 The props object containing the appData.
@@ -34,6 +36,7 @@ function App({ appData }) {
         {/* Route parameter example: /user/1 */}
         <Route path="user/:id" element={<User appData={appData} />} />
         <Route path="users" element={<Users appData={appData} />} />
+        <Route path="create-user" element={<CreateUser appData={appData} />} />
         <Route path="logout" element={<Logout />} />
         <Route path="*" element={<h2>404 - React Router: page not found</h2>} />
       </Route>

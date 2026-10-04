@@ -34,6 +34,9 @@ export default function Layout({ appData }) {
         <NavLinkItem to="/users">
           Users
         </NavLinkItem>
+        <NavLinkItem to="/create-user">
+          Create User
+        </NavLinkItem>
         <NavLinkItem to="/logout">
           Logout
         </NavLinkItem>
